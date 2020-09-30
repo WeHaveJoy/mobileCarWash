@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/WeHaveJoy/mobileCarWash#readme",
   "dependencies": {
-    "express-handlebars": "^5.1.0"
+    "express-flash": "0.0.2",
+    "express-handlebars": "^5.1.0",
+    "express-session": "^1.17.1",
+    "nodeJS": "^1.0.0"
   }
 }

@@ -1,0 +1,67 @@
+<div class="content">
+<h1>Mobile Car Wash</h1>
+
+     <div class="errorMessage">
+    <h2> {{messages.error}}</h2>
+</div>
+
+<u><h2>Services</h2></u>
+
+ <form action="/washing" method="POST">
+<ul>
+<div class="identity">
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+<label for="name">Location:</label>
+<input type="text" id="location" name="location">
+</div> 
+<br>
+<div class="dropDown">
+<select name="" class="VehicleType">
+<option class = "vehicle" value="">Car Type</option>
+<option class = "vehicle" value="Bus">Bus</option>
+<option class = "vehicle" value="Car">Car</option>
+<option class = "vehicle" value="Taxi">Taxi</option>
+</select>
+</div>
+<br>
+<p>Please note prices will vary as they are influenced by the type of vehicle.</p>
+<br>
+<div class="Wash">
+<label class="">
+<input type="radio" name="serveType" class="serveType" value="InteriorWash">
+<span class="label-body">Interior Wash Only</span>
+
+</label>
+<br> 
+<label class="">
+<input type="radio" name="serveType" class="serveType" value="ExteriorWash">
+<span class="label-body">Exterior Wash Only</span>
+
+</label>
+<br>
+<label class="">
+<input type="radio" name="serveType" class="serveType" value="both">
+<span class="label-body">Both</span>
+
+</label>
+</div>
+<br>
+<div class="getBillBtn">
+    <button class="getBillBtn" type="submit" name="button" >Get Bill</button>
+   
+</div>
+</ul>
+<br>
+
+ <form action="/mess" method="GET">
+    <div class="control bottomMessage">
+        <div class="washMessage">
+            {{vehWash.name}}
+        </div>
+    </div>
+    </form>
+               
+</form>
+</div>

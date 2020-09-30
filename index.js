@@ -54,47 +54,6 @@ app.get('/cash', function (req, res){
   res.render('cash')
 });
 
-// app.get('/', function (req, res) {
-//   //res.render('payment')
-
-//   MobiCarWash.setName(req.body.name);
-
-// })
-
-// app.post('/washing', function (req, res) {
-//  // var names = req.body.name
-//  // console.log(names);
-
-//   var carType = req.body.vehicle
-//   //var serviceType =req.body.serveType
-
-//   if (carType === undefined) {
-//     req.flash('error', 'Please select vehicle type')
-//   }
-
-
-
-//   // else {
-//   //   washing.greetingLanguages(carType, serviceType, names)
-//   // }
-
-//   // let vehWash = {
-//   // name: washing.washingServices(carType, serviceType, names),
-//   //   count: washing.washCounter()
-//   //}
-//   // console.log(washing.washCounter());
-//   res.render('index', {
-//     //vehWash
-//   });
-// })
-
-
-// app.get('/actions/:name', function (req, res) {
-//   var name = req.params.name
-//   let recordedNames = washing.getName(name)
-//   res.render('actions', { actions: recordedNames })
-// })
-
 const PORT = process.env.PORT || 3009;
 
 app.listen(PORT, function () {

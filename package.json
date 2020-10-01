@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,6 @@
     "express-flash": "0.0.2",
     "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
-    "nodeJS": "^1.0.0"
+    "pg": "^8.3.3"
   }
 }

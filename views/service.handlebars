@@ -1,0 +1,102 @@
+<div class="content">
+    <h1>Mobile Car Wash</h1>
+
+
+    <u>
+        <h2>Services</h2>
+    </u>
+
+    {{!-- <form action="payment" method="POST"> --}}
+        <ul>
+            <div class="identity">
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="name">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <br>
+            <p>Please note prices will vary as they are influenced by the type of vehicle.</p>
+            <br>
+
+            <table style="width:100%" class="table">
+                <tr>
+                    <th>Service</th>
+                    <th>Car</th>
+                    <th>Taxi</th>
+                    <th>Bus</th>
+                </tr>
+                <tr>
+                    <td>Interior</td>
+                    <td>R50</td>
+                    <td>R70</td>
+                    <td>R100</td>
+                </tr>
+                <tr>
+                    <td>Exterior</td>
+                    <td>R30</td>
+                    <td>R60</td>
+                    <td>R80</td>
+                </tr>
+                <tr>
+                    <td>Both</td>
+                    <td>R80</td>
+                    <td>R130</td>
+                    <td>R180</td>
+                </tr>
+            </table>
+
+            <br>
+
+            <div class="dropDown">
+                <select name="" class="VehicleType">
+                    <option class="vehicle" value="" required>Car Type</option>
+                    <option class="vehicle" value="Bus">Bus</option>
+                    <option class="vehicle" value="Car">Car</option>
+                    <option class="vehicle" value="Taxi">Taxi</option>
+                </select>
+            </div>
+            <br>
+            <div class="errorMessage">
+                <h3> {{messages.error}}</h3>
+            </div>
+            <br>
+            <div class="Wash">
+                <label class="">
+                    <input type="radio" name="serveType" class="serveType" value="InteriorWash" required>
+                    <span class="label-body">Interior Wash Only</span>
+
+                </label>
+                <br>
+                <label class="">
+                    <input type="radio" name="serveType" class="serveType" value="ExteriorWash" required>
+                    <span class="label-body">Exterior Wash Only</span>
+
+                </label>
+                <br>
+                <label class="">
+                    <input type="radio" name="serveType" class="serveType" value="both" required>
+                    <span class="label-body">Both</span>
+
+                </label>
+            </div>
+            <br>
+            <div class="getBillBtn">
+                <a href="payment">
+                    <button class="getBillBtn" type="submit" name="submit">Get Bill</button>
+                </a>
+
+            </div>
+        </ul>
+        <br>
+
+        {{!-- <form action="/mess" method="GET">
+            <div class="control bottomMessage">
+                <div class="washMessage">
+                    {{vehWash.name}}
+                </div> --}}
+        {{!-- </div>
+        </form> --}}
+
+    {{!-- </form> --}}
+</div>

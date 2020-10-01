@@ -1,4 +1,3 @@
-
 module.exports =  function  MobiCarWash(pool) {
     const recordedNames = {};
 

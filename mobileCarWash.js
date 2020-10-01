@@ -1,43 +1,61 @@
-module.exports =  function  MobiCarWash() {
+
+module.exports =  function  MobiCarWash(pool) {
     const recordedNames = {};
 
 
-//  function setList(settings){
-  
+ async function setList(settings){
+    await pool.query('insert into car_owners(name, location, car_type, service_type) values($1, $2), $3, $4', [settings, 1]);
 
-//  }
+  }
 
-//  function getList(){
+ function getList(){
+    var list = pool.query('SELECT * FROM car_owners')
+    return list;
+ }
 
 
-//  }
+    // function setName(name) {
+    //     if (name) {
+    //         if (recordedNames[name] === undefined) {
+    //             recordedNames[name] = 0;
+    //         }
+    //         recordedNames[name];
+    //     }
 
+    // }
 
-    function setName(name) {
-        if (name) {
-            if (recordedNames[name] === undefined) {
-                recordedNames[name] = 0;
-            }
-            recordedNames[name];
+    async function carService(SelectedServ){
+        var names = await setList(settings)
+        if (names.rowname === undefined) {
+            await getList(names);   
+        }
+        await insertNames(names);
+
+        if (SelectedServ === "Interior") {
+            return "Interior";
+        } 
+        else if(SelectedServ === "Exterior"){
+            return "Exterior";
+        }
+        else if (SelectedServ === "Both"){
+            return "Both";
         }
 
     }
 
 
-    function getName() {
-        return recordedNames;
-    }
-
-    // function location(adress, name){
-    //     if( ){}
-
+    // function getName() {
+    //     return recordedNames;
     // }
-    
+
 
     return {
-        setName,
-        getName,
-        //location
+        // setName,
+        // getName,
+        setList,
+        getList,
+        carService
+
     }
 }
 

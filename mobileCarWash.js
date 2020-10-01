@@ -1,5 +1,5 @@
-module.exports = function MobiCarWash(recorded) {
-    const recordedNames = recorded || {};
+module.exports = function MobiCarWash() {
+    const recordedNames = {};
 
 
     function setName(name) {
@@ -12,19 +12,40 @@ module.exports = function MobiCarWash(recorded) {
 
     }
 
-    function washingServices(selectedVehicle, selectedServeType, name) {
-        setName(name)
-        if (selectedVehicle === "Bus") {
-            return "Hi, " + name + "you chosen to wash your Bus, " + selectedServeType;
-        }
-        if (selectedVehicle === "Car") {
-            return "Hi, " + name + "you chosen to wash your Car, " + selectedServeType;
-        }
-        if (selectedVehicle === "Taxi") {
-            return "Hi, " + name + "you chosen to wash your Taxi, " + selectedServeType;
-        }
 
+    function getName() {
+        return recordedNames;
     }
+
+    // function location(adress, name){
+    //     if( ){}
+
+    // }
+    
+
+    return {
+        setName,
+        getName,
+        //location
+    }
+}
+
+
+
+
+// function washingServices(selectedVehicle, selectedServeType, name) {
+    //     setName(name)
+    //     if (selectedVehicle === "Bus") {
+    //         return "Hi, " + name + "you chosen to wash your Bus, " + selectedServeType;
+    //     }
+    //     if (selectedVehicle === "Car") {
+    //         return "Hi, " + name + "you chosen to wash your Car, " + selectedServeType;
+    //     }
+    //     if (selectedVehicle === "Taxi") {
+    //         return "Hi, " + name + "you chosen to wash your Taxi, " + selectedServeType;
+    //     }
+
+    // }
 
     // function regExpression(activeName) {
     //     var namesReg = /^[A-Za-z]+$/;
@@ -37,10 +58,10 @@ module.exports = function MobiCarWash(recorded) {
     //   }
 
     // }
-    function washCounter() {
-        var namesList = Object.keys(recordedNames)
-        return namesList.length;
-    }
+    // function washCounter() {
+    //     var namesList = Object.keys(recordedNames)
+    //     return namesList.length;
+    // }
 
     // function recorder(action) {
     //     let names = [];
@@ -52,21 +73,3 @@ module.exports = function MobiCarWash(recorded) {
     //             names
     //         });
     //     }
-
-
-
-    function getName() {
-        return recordedNames;
-    }
-
-
-    return {
-        setName,
-        washingServices,
-        washCounter,
-        //regExpression,
-        // recorder,
-        getName,
-
-    }
-}

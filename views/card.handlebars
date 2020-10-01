@@ -1,29 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Card</title>
-</head>
-<body>
-<div class="container">
+
+<h1>Card Details</h1>
+
 <div class="texts">
-Name of the card: <input type="text" >
 
-</br> </br>
+<form>
+    <label for="nCard">Name of the card</label><br>
+ <input type="text" id="nCard" name="nCard" required><br><br>
 
-Card Number: <input type="text" > 
-</br> </br>
-Expiry Date: <input type="text" > 
-</br> </br>
-CVV digits : <input type="text" >
+ <label for="cNumber" >Card Number</label><br>
+ <input type="text" id="cNumber" name="cNumber" required></br><br>
+
+ <label for="cNumber" >Account Number</label></br>
+ <input type="text" id="aNumber" name="aNumber" required></br><br>
+
+<label for="eDate" >Expiry Date</label><br>
+<input type="date" id="eDate" name="eDate"  required><br><br>
+{{!-- <input type="number" id="eDate" name="eDate" placeholder="Month"><br><br> --}}
+
+<label for="digits" >CVV digits</label><br>
+<input type="text" id="digits" name="digits" required maxlength="3" ><br><br>
+ {{!-- var d =new Date(2020, 12)for setting a date, not sure how to do it --}} 
 
 </div>
 
 <div>
 </br>
 <button>Make Payment</button>
+</form>
 </div>
-</div>
-</body>
-</html>
+
